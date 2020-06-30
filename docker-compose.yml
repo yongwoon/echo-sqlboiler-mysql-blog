@@ -6,7 +6,7 @@ services:
       context: ./api/
       dockerfile: Dockerfile.dev
     container_name: dev_echo_blog
-    command: go run main.go
+    command: make run
     ports:
       - 1323:1323
     networks:

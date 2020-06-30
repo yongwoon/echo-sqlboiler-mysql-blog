@@ -4,11 +4,13 @@ LABEL maintainer="https://github.com/yongwoon"
 
 ENV GO111MODULE=on
 ENV GOPATH /go
+ENV API_ROOT /go/src/github.com/yongwoon/echo-blog
 
-RUN apk update && apk add --no-cache bash vim openssh curl
+RUN apk update && apk add --no-cache bash git vim openssh curl make
 
-WORKDIR /go/src/github.com/yongwoon/echo-blog
+RUN GO111MODULE=off go get github.com/oxequa/realize
 
-COPY . .
-
+WORKDIR $API_ROOT
+COPY go.mod go.sum ./
 RUN go mod download
+COPY . .
