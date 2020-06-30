@@ -12,3 +12,7 @@ WORKDIR /go/src/github.com/yongwoon/echo-blog
 COPY . .
 
 RUN go mod download
+
+RUN go get github.com/cosmtrek/air
+
+CMD air -c .air.conf
