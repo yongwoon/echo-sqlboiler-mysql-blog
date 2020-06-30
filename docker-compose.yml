@@ -6,7 +6,7 @@ services:
       context: ./api/
       dockerfile: Dockerfile.dev
     container_name: dev_echo_blog
-    command: /bin/sh -c "while sleep 1000; do :; done"
+    command: go run main.go
     ports:
       - 1323:1323
     networks:
