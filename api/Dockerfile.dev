@@ -1,0 +1,10 @@
+FROM golang:1.14.4-alpine
+
+LABEL maintainer="https://github.com/yongwoon"
+
+WORKDIR /go/src/github.com/yongwoon/echo-blog
+
+ENV GO111MODULE=on
+ENV GOPATH /go
+
+RUN apk update && apk add --no-cache bash vim openssh curl
