@@ -5,7 +5,10 @@ LABEL maintainer="https://github.com/yongwoon"
 ENV GO111MODULE=on
 ENV GOPATH /go
 
-RUN apk update && apk add --no-cache bash vim openssh curl
+RUN apk update && apk add --no-cache bash vim openssh curl gcc g++ git musl-dev \
+  && GO111MODULE=off go get -v github.com/rubenv/sql-migrate/... \
+  && GO111MODULE=off go get -u -t github.com/volatiletech/sqlboiler \
+  && GO111MODULE=off go get github.com/volatiletech/sqlboiler/drivers/sqlboiler-mysql
 
 WORKDIR /go/src/github.com/yongwoon/echo-blog
 

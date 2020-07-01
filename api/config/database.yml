@@ -1,0 +1,13 @@
+default: &default
+  dialect: mysql
+  datasource: ${DATABASE_USER}:${DATABASE_PASSWORD}@tcp(${DATABASE_HOST}:${DATABASE_PORT})/${DATABASE_SCHEMA}?parseTime=true
+  dir: db/migration
+
+development:
+  <<: *default
+
+test:
+  <<: *default
+
+production:
+  <<: *default
