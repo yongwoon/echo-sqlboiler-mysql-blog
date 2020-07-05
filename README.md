@@ -2,6 +2,10 @@
 
 blog site
 
+## Setup development
+
+- [Set up](./docs/dev.md)
+
 ## Reference
 
 - [api directory structure](./api/docs/directory_structure.md)
@@ -10,5 +14,10 @@ blog site
 
 - golang
   - [project-layout](https://github.com/golang-standards/project-layout)
-- packages
-  - [cosmtrek/air](https://github.com/cosmtrek/air)
+
+## NEXT
+
+- handler seeting
+- model setting
+- response setting
+- routing に handler 合わせる

@@ -8,6 +8,7 @@ development:
 
 test:
   <<: *default
+  datasource: ${DATABASE_USER}:${DATABASE_PASSWORD}@tcp(${DATABASE_HOST}:${DATABASE_PORT})/echo_blog_test?parseTime=true
 
 production:
   <<: *default

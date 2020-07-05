@@ -1,15 +1,17 @@
 package main
 
 import (
-	"net/http"
 
-	"github.com/labstack/echo/v4"
+	echo "github.com/labstack/echo/v4"
+	"github.com/yongwoon/echo-blog/route"
+	"github.com/yongwoon/echo-blog/config/initializer"
 )
 
 func main() {
+	initializer.InitDotenv()
+
 	e := echo.New()
-	e.GET("/", func(c echo.Context) error {
-		return c.String(http.StatusOK, "Hello, World!")
-	})
+	route.Init(e)
+
 	e.Logger.Fatal(e.Start(":1323"))
 }
