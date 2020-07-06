@@ -1,0 +1,12 @@
+blacklist=[]
+output   = "/go/src/github.com/yongwoon/echo-blog/db/orm"
+wipe     = true
+no-tests = true
+
+[mysql]
+  dbname  = "echo_blog_development"
+  host    = "db"
+  port    = 3306
+  user    = "root"
+  pass    = ""
+  sslmode = "false"
