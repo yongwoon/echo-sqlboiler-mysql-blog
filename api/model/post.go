@@ -39,3 +39,17 @@ func (p *Post) All() ([]*Post, error) {
 
 	return list, nil
 }
+
+// All return all posts
+func (p *Post) Find(id uint64) (*Post, error) {
+	db, _ := db.Connect()
+
+	res, err := orm.FindPost(context.Background(), db, id)
+	if err != nil {
+		return nil, err
+	}
+
+	post := &Post{ID: res.ID, Title: res.Title, Body: res.Body}
+
+	return post, nil
+}

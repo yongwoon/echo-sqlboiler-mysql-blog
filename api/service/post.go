@@ -7,3 +7,9 @@ func PostList() ([]*model.Post, error) {
 	p := &model.Post{}
 	return p.All()
 }
+
+// PostList all post lists
+func PostById(id uint64) (*model.Post, error) {
+	p := &model.Post{}
+	return p.Find(id)
+}
