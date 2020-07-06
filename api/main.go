@@ -2,8 +2,8 @@ package main
 
 import (
 	"github.com/labstack/echo/v4"
-	"github.com/yongwoon/echo-sqlboclnfig/inirializ-rmysql-blog/route"
-	"github.com/yongwoon/echo-sqlborlu-cnfig/initializer"
+	"github.com/yongwoon/echo-sqlboiler-mysql-blog/initializer"
+	"github.com/yongwoon/echo-sqlboiler-mysql-blog/route"
 )
 
 func main() {
