@@ -2,7 +2,7 @@
 // https://github.com/microsoft/vscode-dev-containers/tree/v0.122.1/containers/docker-existing-docker-compose
 // If you want to run as a non-root user in the container, see .devcontainer/docker-compose.yml.
 {
-  "name": "echo-blog",
+  "name": "echo-sqlboiler-mysql-blog",
 
   // Update the 'dockerComposeFile' list if you have more compose files or use different names.
   // The .devcontainer/docker-compose.yml file contains any overrides you need/want to make.
@@ -14,7 +14,7 @@
 
   // The optional 'workspaceFolder' property is the path VS Code should open by default when
   // connected. This is typically a file mount in .devcontainer/docker-compose.yml
-  "workspaceFolder": "/go/src/github.com/yongwoon/echo-blog",
+  "workspaceFolder": "/go/src/github.com/yongwoon/echo-sqlboiler-mysql-blog",
 
   // Set *default* container specific settings.json values on container create.
   "settings": {

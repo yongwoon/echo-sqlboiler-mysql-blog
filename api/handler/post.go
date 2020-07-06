@@ -5,7 +5,7 @@ import (
 	"strconv"
 
 	echo "github.com/labstack/echo/v4"
-	"github.com/yongwoon/echo-blog/service"
+	"github.com/yongwoon/echo-sqlboiler-mysql-blog/service"
 )
 
 type (

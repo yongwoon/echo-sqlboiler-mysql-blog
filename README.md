@@ -1,4 +1,4 @@
-# echo-blog
+# echo-sqlboiler-mysql-blog
 
 blog site
 
