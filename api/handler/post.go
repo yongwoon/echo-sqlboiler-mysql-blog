@@ -4,6 +4,7 @@ import (
 	"net/http"
 
 	echo "github.com/labstack/echo/v4"
+	"github.com/yongwoon/echo-blog/service"
 )
 
 type (
@@ -24,7 +25,13 @@ func NewPost() *Post {
 
 // Index : api/vX/posts
 func (p *Post) Index(c echo.Context) error {
-	return c.JSON(http.StatusOK, "posts index")
+
+	res, err := service.PostList()
+	if err != nil {
+		return err
+	}
+
+	return c.JSON(http.StatusOK, res)
 }
 
 // Show : api/vX/posts/:id
