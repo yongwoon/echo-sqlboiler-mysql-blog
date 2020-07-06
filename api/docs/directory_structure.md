@@ -6,7 +6,8 @@
   - Configuration file templates or default configs.
 - config/initializer
   - System init (systemd, upstart, sysv) and process manager/supervisor (runit, supervisord) configs.
-- controller
+- handler
+  - api controller
 - db
   - migrations, fixtures
 - deployments
