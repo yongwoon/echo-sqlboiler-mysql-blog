@@ -2,6 +2,10 @@
 
 blog site
 
+## Setup development
+
+- [Set up](./docs/dev.md)
+
 ## Reference
 
 - [api directory structure](./api/docs/directory_structure.md)
