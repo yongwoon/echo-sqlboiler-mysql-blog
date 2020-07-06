@@ -3,9 +3,12 @@ package main
 import (
 	"github.com/labstack/echo/v4"
 	"github.com/yongwoon/echo-blog/route"
+	"github.com/yongwoon/echo-blog/config/initializer"
 )
 
 func main() {
+	initializer.InitDotenv()
+
 	e := echo.New()
 	route.Init(e)
 
