@@ -1,4 +1,4 @@
-module github.com/yongwoon/echo-blog
+module github.com/yongwoon/echo-sqlboiler-mysql-blog
 
 go 1.14
 

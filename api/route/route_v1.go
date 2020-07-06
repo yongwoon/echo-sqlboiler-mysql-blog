@@ -2,8 +2,8 @@ package route
 
 import (
 	echo "github.com/labstack/echo/v4"
-	"github.com/yongwoon/echo-blog/config"
-	"github.com/yongwoon/echo-blog/handler"
+	"github.com/yongwoon/echo-sqlboiler-mysql-blog/config"
+	"github.com/yongwoon/echo-sqlboiler-mysql-blog/handler"
 )
 
 func routeV1(e *echo.Echo) {

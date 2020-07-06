@@ -1,6 +1,6 @@
 package service
 
-import "github.com/yongwoon/echo-blog/model"
+import "github.com/yongwoon/echo-sqlboiler-mysql-blog/model"
 
 // PostList all post lists
 func PostList() ([]*model.Post, error) {

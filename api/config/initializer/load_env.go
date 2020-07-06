@@ -11,7 +11,7 @@ func InitDotenv() {
 
 	var err error
 	if ok == true {
-		err = godotenv.Load(os.ExpandEnv("$GOPATH/src/github.com/yongwoon/echo-blog/.env." + currentEnvironment))
+		err = godotenv.Load(os.ExpandEnv("$GOPATH/src/github.com/yongwoon/echo-sqlboiler-mysql-blog/.env." + currentEnvironment))
 	} else {
 		err = godotenv.Load()
 	}

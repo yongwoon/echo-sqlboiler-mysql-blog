@@ -7,8 +7,8 @@ import (
 
 	"github.com/volatiletech/sqlboiler/v4/boil"
 	"github.com/volatiletech/sqlboiler/v4/queries/qm"
-	db "github.com/yongwoon/echo-blog/db"
-	"github.com/yongwoon/echo-blog/db/orm"
+	db "github.com/yongwoon/echo-sqlboiler-mysql-blog/db"
+	"github.com/yongwoon/echo-sqlboiler-mysql-blog/db/orm"
 )
 
 type (
