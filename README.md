@@ -17,3 +17,12 @@ blog site
   - [project-layout](https://github.com/golang-standards/project-layout)
 - packages
   - [cosmtrek/air](https://github.com/cosmtrek/air)
+
+## TODO
+
+- Split handler by version
+- API
+  - POST api/v1/posts
+  - PATCH api/v1/posts/:id
+  - DELETE api/v1/pists/:id
+- TEST Code
