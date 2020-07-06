@@ -2,6 +2,7 @@ package handler
 
 import (
 	"net/http"
+	"strconv"
 
 	echo "github.com/labstack/echo/v4"
 	"github.com/yongwoon/echo-blog/service"
@@ -36,5 +37,13 @@ func (p *Post) Index(c echo.Context) error {
 
 // Show : api/vX/posts/:id
 func (p *Post) Show(c echo.Context) error {
-	return c.JSON(http.StatusOK, "posts show")
+	idStr := c.Param("id")
+	id, err := strconv.ParseUint(idStr, 10, 64)
+
+	res, err := service.PostById(id)
+	if err != nil {
+		return err
+	}
+
+	return c.JSON(http.StatusOK, res)
 }
