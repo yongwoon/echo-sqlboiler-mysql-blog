@@ -9,6 +9,7 @@ blog site
 ## Reference
 
 - [api directory structure](./api/docs/directory_structure.md)
+- [sql-boiler setting](./api/docs/sql_boiler.md)
 
 ## Links
 
