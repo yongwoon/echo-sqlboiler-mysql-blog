@@ -8,8 +8,14 @@ func PostList() ([]*model.Post, error) {
 	return p.All()
 }
 
-// PostList all post lists
-func PostById(id uint64) (*model.Post, error) {
+// PostByID get post by id
+func PostByID(id uint64) (*model.Post, error) {
 	p := &model.Post{}
 	return p.Find(id)
+}
+
+// PostCreate Create post
+func PostCreate(title, body string) (*model.Post, error) {
+	p := &model.Post{}
+	return p.Create(title, body)
 }

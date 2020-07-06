@@ -26,3 +26,4 @@ blog site
   - PATCH api/v1/posts/:id
   - DELETE api/v1/pists/:id
 - TEST Code
+- RESPONSE

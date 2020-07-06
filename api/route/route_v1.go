@@ -13,4 +13,5 @@ func routeV1(e *echo.Echo) {
 	postHandler := handler.NewPost()
 	posts.GET("", postHandler.Index)
 	posts.GET("/:id", postHandler.Show)
+	posts.POST("", postHandler.Create)
 }

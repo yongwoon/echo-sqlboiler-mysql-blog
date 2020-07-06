@@ -17,6 +17,11 @@ type (
 	// Post struct
 	Post struct {
 	}
+
+	postCreateReq struct {
+		Title string `json:"title"`
+		Body  string `json:"body"`
+	}
 )
 
 // NewPost returns NewPost instance.
@@ -40,10 +45,24 @@ func (p *Post) Show(c echo.Context) error {
 	idStr := c.Param("id")
 	id, err := strconv.ParseUint(idStr, 10, 64)
 
-	res, err := service.PostById(id)
+	res, err := service.PostByID(id)
 	if err != nil {
 		return err
 	}
 
 	return c.JSON(http.StatusOK, res)
+}
+
+// Create : POST api/vx/posts
+func (p *Post) Create(c echo.Context) error {
+	pcr := &postCreateReq{}
+	if err := c.Bind(pcr); err != nil {
+		return err
+	}
+
+	post, err := service.PostCreate(pcr.Title, pcr.Body)
+	if err != nil {
+		return err
+	}
+	return c.JSON(http.StatusOK, post)
 }
