@@ -22,8 +22,14 @@ blog site
 
 - Split handler by version
 - API
-  - POST api/v1/posts
   - PATCH api/v1/posts/:id
   - DELETE api/v1/pists/:id
 - TEST Code
 - RESPONSE
+- Logger as file
+
+### ref
+
+- [golang mock](https://github.com/golang/mock)
+- [goconvey](http://goconvey.co/)
+- [goconvey github](https://github.com/smartystreets/goconvey)
